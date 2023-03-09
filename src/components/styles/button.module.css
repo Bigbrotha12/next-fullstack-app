@@ -1,0 +1,12 @@
+
+.button {
+    background-color: red;
+    padding-inline: 0.5rem;
+    margin-inline: 0.2rem;
+    border: 1px solid linear-gradient(white, black);
+    border-radius: 8px;
+}
+
+.button > p {
+    color: white;
+}
