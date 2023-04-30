@@ -1,0 +1,17 @@
+
+.bar {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    gap: 8rem;
+    border: 1px inset gray;
+    border-radius: 2rem;
+}
+
+.bar > p {
+    color: gray
+}

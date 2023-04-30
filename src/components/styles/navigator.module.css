@@ -1,0 +1,33 @@
+.navigator {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0.5rem;
+    background-color: var(--primary-color);
+}
+
+.navigation_logo {
+    display: inherit;
+}
+
+.navigation_buttons {
+    display: inherit;
+    padding: 0.2rem;
+}
+
+.navigation_search {
+    display: inherit;
+    justify-content: center;
+    margin-inline: auto;
+    width: 40%;
+}
+
+.navigation_options {
+    display: inherit;
+    margin-block: auto;
+    gap: 0.5rem;
+}
+
+.navigation_login {
+    display: inherit;
+    padding: 0.4rem;
+}
