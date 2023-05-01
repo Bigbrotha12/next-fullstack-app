@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Header from '@/components/Header'
 import SearchBar from '@/components/SearchBar'
+import LandingBanner from '@/components/LandingBanner'
 import { Icons } from '@/assets/Icons'
 import { Inter } from 'next/font/google'
 
@@ -20,9 +21,7 @@ export default function Home() {
         
         <Header
           navigation={[
-            "This is a button",
-            "Second",
-            "Third"
+            "Home", "Services", "Contact"
           ]}
           searchBar={<SearchBar />}
           options={[
@@ -31,6 +30,8 @@ export default function Home() {
           ]}
           endButton={"Login"}
         />
+
+        <LandingBanner />
 
       </main>
     </React.Fragment>

@@ -1,6 +1,6 @@
 :root {
     --background-color: blue;
-    --primary-color: brown;
+    --primary-color: #242424;
     --secondary-color: pink;
     --accent-color: orange;
     --font-family: Roboto;
@@ -9,7 +9,7 @@
 html,
 body {
     margin: 0px;
-    background-color: black;
+    background-color: var(--primary-color);
 }
 
 /* Dark theme */

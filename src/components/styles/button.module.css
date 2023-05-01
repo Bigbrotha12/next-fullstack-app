@@ -1,12 +1,16 @@
 
 .button {
-    background-color: red;
-    padding-inline: 0.5rem;
+    background-color: #242424;
+    color: white;
+    font-weight: bold;
+    padding-inline: 2em;
+    padding-block: 1em;
     margin-inline: 0.2rem;
-    border: 1px solid linear-gradient(white, black);
-    border-radius: 8px;
+    border: 1px solid;
+    border-radius: 6px;
 }
 
-.button > p {
-    color: white;
+.button:hover {
+    background-color: darkblue;
 }
+

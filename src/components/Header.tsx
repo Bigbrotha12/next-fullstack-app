@@ -13,11 +13,11 @@ export default function Header(props: {
     return (
         <nav className={styles.navigator}>
             <div className={styles.logo}>{props.logo}</div>
-            <div className={styles.navigation_buttons}>
+            <div className={styles.navigation_nav}>
                 {
                     props.navigation?.map((item, index) => {
                         return (
-                            <Button key={index}>{item}</Button>
+                            <div key={index}>{item}</div>
                         )
                     })
                 }

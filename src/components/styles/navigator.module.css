@@ -1,12 +1,27 @@
 .navigator {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-block: 0.5rem;
     background-color: var(--primary-color);
 }
 
 .navigation_logo {
     display: inherit;
+}
+
+.navigation_nav {
+    display: flex;
+    gap: 3rem;
+    margin-inline: 12px;
+    padding-left: 12px;
+    color: white;
+    font-weight: bold
+}
+
+.navigation_nav > div:hover {
+    color: red;
+    cursor: pointer;
 }
 
 .navigation_buttons {
@@ -23,8 +38,18 @@
 
 .navigation_options {
     display: inherit;
-    margin-block: auto;
+    color: white;
     gap: 0.5rem;
+}
+
+.navigation_options > div {
+    display: flex;
+    align-items: center;
+}
+
+.navigation_options > div:hover {
+    color: yellow;
+    cursor: pointer;
 }
 
 .navigation_login {
