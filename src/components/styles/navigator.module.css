@@ -1,8 +1,9 @@
 .navigator {
     display: flex;
+    font-size: 1.5rem;
     justify-content: space-between;
     align-items: center;
-    padding-block: 0.5rem;
+    padding-block: 12px;
     background-color: var(--primary-color);
 }
 
@@ -12,21 +13,26 @@
 
 .navigation_nav {
     display: flex;
-    gap: 3rem;
-    margin-inline: 12px;
+    gap: 32px;
+    margin-inline: 32px;
     padding-left: 12px;
-    color: white;
-    font-weight: bold
+    color: var(--secondary-color);
+    
+}
+
+.navigation_nav > div {
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .navigation_nav > div:hover {
-    color: red;
+    color: var(--font-color);
+    border-bottom: 2px solid var(--font-color);
     cursor: pointer;
 }
 
 .navigation_buttons {
     display: inherit;
-    padding: 0.2rem;
+    padding: 8px;
 }
 
 .navigation_search {
@@ -38,21 +44,22 @@
 
 .navigation_options {
     display: inherit;
-    color: white;
+    color: var(--secondary-color);
     gap: 0.5rem;
 }
 
 .navigation_options > div {
     display: flex;
     align-items: center;
+    margin-inline-end: 12px;
 }
 
 .navigation_options > div:hover {
-    color: yellow;
+    color: var(--accent-color);
     cursor: pointer;
 }
 
 .navigation_login {
     display: inherit;
-    padding: 0.4rem;
+    padding: 12px;
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "./Button"
 import styles from "./styles/navigator.module.css";
+import Link from "next/link";
 
 export default function Header(props: {
     className?: string,
@@ -31,7 +32,7 @@ export default function Header(props: {
                 }
             </div>
             <div className={styles.navigation_login}>
-                <Button>{props.endButton}</Button>
+                <Link href="/login"><Button>{props.endButton}</Button></Link>
             </div>
             
         </nav>

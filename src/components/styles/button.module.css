@@ -1,16 +1,17 @@
 
 .button {
-    background-color: #242424;
-    color: white;
-    font-weight: bold;
-    padding-inline: 2em;
-    padding-block: 1em;
-    margin-inline: 0.2rem;
-    border: 1px solid;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding-inline: 24px;
+    padding-block: 8px;
+    margin-inline: 16px;
+    border: 0px;
     border-radius: 6px;
+    font-size: 1.5rem;
 }
 
 .button:hover {
-    background-color: darkblue;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
 }
 

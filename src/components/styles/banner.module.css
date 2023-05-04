@@ -3,7 +3,7 @@
 
     display: flex;
     min-height: var(--minimum-height);
-    background-image: url("https://picsum.photos/id/684/600/400"); 
+    background-image: url("https://picsum.photos/1600/900"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
@@ -13,16 +13,27 @@
     position: relative;
     min-height: var(--minimum-height);;
     width: 30%;
-    background-color: darkgreen;
-    padding-inline: 3rem;
-    padding-block: 1.5rem;
+    padding-inline: 32px;
+    padding-block: 16px;
     overflow: hidden;
+    
+}
+
+.banner_sidepanel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    mix-blend-mode: multiply;
 }
 
 .banner_sidepanel > h2,
 .banner_sidepanel > p {
-    color: white;
-    
+    position: relative;
+    color: var(--secondary-color);
 }
 
 .banner_sidepanel > h2 {
@@ -30,5 +41,6 @@
 }
 
 .banner_sidepanel > p {
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
 }

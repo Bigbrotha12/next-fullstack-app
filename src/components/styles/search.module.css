@@ -1,19 +1,19 @@
 
 .bar {
     display: flex;
-    background-color: white;
+    background-color: var(--secondary-color);
     align-items: center;
-    height: 3rem;
+    height: 44px;
     width: 100%;
-    padding-left: 2rem;
-    padding-right: 1.5rem;
+    padding-left: 24px;
+    padding-right: 16px;
     gap: 12px;
-    border: 1px inset gray;
+    border: 1px inset var(--font-color);
     border-radius: 2rem;
 }
 
 .bar > p {
-    color: gray
+    color: var(--font-color);
 }
 
 .bar > input {
