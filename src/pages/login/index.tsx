@@ -13,11 +13,6 @@ export default function LoginPrompt(props: any) {
 const prisma = new PrismaClient()
 
 export async function getStaticProps() {
-    
-    // BigInt.prototype.toJSON = function (): string {
-    //     return this.toString();
-    // };
-
     const allUsers = await prisma.users.findMany()
     const parsedUsers = JSON.stringify(allUsers, (_key, value) =>
       typeof value === 'bigint' ? value.toString() : value)
