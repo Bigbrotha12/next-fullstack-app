@@ -5,9 +5,7 @@
     align-items: center;
     height: 44px;
     width: 100%;
-    padding-left: 24px;
-    padding-right: 16px;
-    gap: 12px;
+    padding-inline: 12px;
     border: 1px inset var(--font-color);
     border-radius: 2rem;
 }

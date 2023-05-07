@@ -3,10 +3,11 @@
 
     display: flex;
     min-height: var(--minimum-height);
-    background-image: url("https://picsum.photos/1600/900"); 
-    background-repeat: no-repeat;
+    max-height: 100vh;
+    /* background-image: url("https://picsum.photos/1600/900");  */
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: center;
+    background-position-y: center; */
 }
 
 .banner_sidepanel {

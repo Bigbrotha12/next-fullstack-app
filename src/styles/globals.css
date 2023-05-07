@@ -1,17 +1,19 @@
 :root {
     --background-color: #5D737E;
-    --primary-color: #64B6AC;
+  
     --secondary-color: #FCFFFD;
     --accent-color: #CD5334;
-    --font-family: Roboto;
+    --font-family: Arbutus Slab, Roboto, Inter;
     --font-color: #242424;
+    
 }
 
 html,
 body {
     margin: 0px;
     font-family: var(--font-family);
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background: var(--background-gradient);
 }
 
 /* Dark theme */

@@ -3,7 +3,9 @@ import Head from 'next/head'
 import Header from '@/components/Header'
 import SearchBar from '@/components/SearchBar'
 import LandingBanner from '@/components/LandingBanner'
+import Image from 'next/image'
 import { Icons } from '@/assets/Icons'
+import logo from '@/assets/images/logo-placeholder.png'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,11 +22,13 @@ export default function Home() {
       <main>
         
         <Header
+          logo={<Image src={logo} width='96' height='96' alt='logo' />}
           navigation={[
             "Home", "Services", "Contact"
           ]}
-          searchBar={<SearchBar />}
+          // searchBar={<SearchBar />}
           options={[
+            <Icons.Search key='0' />,
             <Icons.MenuIcon key='1' />,
             <Icons.Language key='2' />
           ]}
