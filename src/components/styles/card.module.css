@@ -1,18 +1,77 @@
 .card_container {
-    display: flex;
     width: fit-content;
+    position: relative;
+    max-width: 20%;
     padding-inline: 32px;
     padding-block: 24px;
     border: 1px solid var(--background-color);
     border-radius: 12px;
-    box-shadow: 2px 2px 2px var(--background-color);
     margin-inline: auto;
     margin-block: 12px;
-    transition: transform 0.3s 0.1s;
+    transition: transform 0.1s;
 }
 
 .card_container:hover {
-    cursor: pointer;
-    transform: scale(1.2, 1.2);
     
+    transform: scale(1.1, 1.1);
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    
+}
+
+.card_container::after,
+.card_container::before {
+    content: '';
+    position: absolute;
+    left: 15%;
+    background-color: var(--primary-color);
+    height: 6px;
+    width: 15%;
+    border-radius: 12px;
+    transition: width 0.1s
+}
+
+.card_container:hover::after,
+.card_container:hover::before {
+    background-color: var(--secondary-color);
+    width: 70%;
+}
+
+.card_container::before {
+    top: -3px;
+}
+
+.card_container::after {
+    bottom: -3px;
+}
+
+.card_container > h3,
+.card_container > p {
+    text-align: left;
+}
+
+.card_container > p {
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+.card_icon_container {
+    margin-inline: auto;
+    height: 24px;
+}
+
+.card_button {
+    border-radius: 12px;
+    padding-inline: 16px;
+    padding-block: 8px;
+    background-color: inherit;
+    border: 2px solid var(--font-color);
+    color: var(--font-color);
+}
+
+.card_container:hover > .card_button {
+    cursor: pointer;
+    border: 2px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }

@@ -1,6 +1,8 @@
 
 .button {
     background-color: var(--accent-color);
+    text-align: center;
+    align-items: center;
     color: var(--secondary-color);
     padding-inline: 24px;
     padding-block: 8px;

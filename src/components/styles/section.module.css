@@ -1,0 +1,22 @@
+.section_container {
+    padding-block: 64px;
+    
+}
+
+.section_container > h5, 
+.section_container > h1 {
+    text-align: center;
+    margin-block: 4px;
+}
+
+.section_container > h5 {
+    font-weight: lighter;
+}
+
+.section_content {
+    margin-block: 32px;
+    margin-inline: 10%;
+    text-align: center;
+    display: flex;
+    gap: 16px;
+}

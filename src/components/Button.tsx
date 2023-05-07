@@ -1,4 +1,3 @@
-import { Material } from "@/assets/Material";
 import styles from './styles/button.module.css';
 
 export default function Button(props: {
@@ -9,8 +8,12 @@ export default function Button(props: {
     children: React.ReactNode
 }): JSX.Element {
     return (
-        <button className={styles.button}>
-            {props.children}
+        <button className={props.className || styles.button}>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '4px'}}>
+                {props.startIcon}
+                {props.children}
+            </div>
+            
         </button>
     )
 }

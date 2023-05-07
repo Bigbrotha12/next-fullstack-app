@@ -1,62 +1,116 @@
 .form_container {
     display: flex;
     min-height: 100vh;
-    background-color: var(--background-color);
+    background: linear-gradient(90deg, var(--background-color) 0%, var(--primary-color) 35%, var(--accent-color) 100%);
 }
 
 .form {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    height: fit-content;
-    border-radius: 12px;
-    margin-inline: auto;
-    margin-block: 10%;
-    padding-inline: 64px;
-    padding-block: 12px;
-    gap: 16px;
+    gap: 8px;
+    width: 35%;
+    min-height: 100vh;
+    border-radius: 0px 12px 12px 0px;
+    padding-block: 16px;
+    padding-inline: 32px;
     background-color: var(--primary-color);
-    box-shadow: 2px 1px 2px var(--secondary-color);
 }
 
-.form > h2 {
-    margin-inline: auto;
+.form_oauth {
+    display: block;
+    margin-block-start: 16px;
+}
+
+.form_oauth > .form_button {
+    margin-block-start: 8px;
+}
+
+.form > h2,
+.form > p  {
+    text-align: left;
+    margin-block: 0;
     color: var(--secondary-color);
     font-weight: bold;
 }
 
-.form > input {
-    height: 2rem;
+.form_fieldset {
+    border-radius: 12px;
+    margin-block: 16px;
+}
+
+.form_fieldset > div {
+    margin-block: 4px;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.form_label {
+    color: var(--secondary-color);
+}
+
+.form_forgot_button {
+    color: var(--secondary-color);
+    margin-left: auto;
+}
+
+.form_legend {
+    padding: 6px;
+    color: var(--secondary-color);
+}
+
+.form_fieldset > div > input {
+    width: 100%;
+    height: 1.5rem;
+    margin-block: 8px;
     border-radius: 6px;
     border: 0px;
-    margin-inline: auto;
     padding: 6px;
 }
 
 .form_button {
     background-color: var(--accent-color);
     color: var(--secondary-color);
-    width: 100%;
     font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-block-start: 24px;
+    margin-inline: auto;
     padding-block: 8px;
-    padding-inline: 12px;
+    padding-inline: 16px;
     border: 0px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .form_button:hover {
     background-color: var(--secondary-color);
     color: var(--font-color);
     font-weight: bold;
-    padding-block: 8px;
-    padding-inline: 12px;
     border: 0px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .register_button {
-    color: var(--font-color);
+    color: var(--secondary-color);
     margin-inline: auto;
     margin-block: 12px;
     text-align: center;
+}
 
+.small_print {
+    color: var(--secondary-color);
+    margin-block-start: 24px;
+    font-size: 0.7rem;
+} 
+
+.aside {
+    width: 60%;
+    padding: 64px;
+}
+
+.side_content {
+    margin-left: auto;
+    max-width: 50%;
+    color: var(--secondary-color);
+    gap: 24px;
+    margin-top: 20%;
 }

@@ -2,25 +2,37 @@
     --minimum-height: 600px;
 
     display: flex;
-    min-height: var(--minimum-height);
+    /* min-height: var(--minimum-height); */
     max-height: 100vh;
+    overflow: hidden;
     /* background-image: url("https://picsum.photos/1600/900");  */
     /* background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center; */
 }
 
+.banner_container::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    bottom: -5%;
+    z-index: -1;
+    background-color: var(--primary-color);
+}
+
 .banner_sidepanel {
-    position: relative;
-    min-height: var(--minimum-height);;
-    width: 30%;
-    padding-inline: 32px;
-    padding-block: 16px;
+    position: absolute;
+    top: 128px;
+    /* min-height: var(--minimum-height); */
+    width: 40%;
+    margin-left: 10%;
+    padding-block: 24px;
     overflow: hidden;
     
 }
 
-.banner_sidepanel::before {
+/* .banner_sidepanel::before {
     content: '';
     position: absolute;
     top: 0;
@@ -29,7 +41,7 @@
     right: 0;
     background-color: var(--background-color);
     mix-blend-mode: multiply;
-}
+} */
 
 .banner_sidepanel > h2,
 .banner_sidepanel > p {
@@ -38,10 +50,26 @@
 }
 
 .banner_sidepanel > h2 {
-    font-size: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .banner_sidepanel > p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.banner_button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding-inline: 24px;
+    padding-block: 8px;
+    margin-block-start: 24px;
+    border: 0px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+.banner_button:hover {
+    background-color: var(--font-color);
 }
