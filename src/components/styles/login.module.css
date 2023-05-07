@@ -1,7 +1,7 @@
 .form_container {
     display: flex;
     min-height: 100vh;
-    background: linear-gradient(90deg, var(--background-color) 0%, var(--primary-color) 35%, var(--accent-color) 100%);
+    background: linear-gradient(90deg, var(--primary-color) 40%, var(--accent-color) 100%);
 }
 
 .form {

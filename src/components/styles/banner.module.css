@@ -23,9 +23,8 @@
 
 .banner_sidepanel {
     position: absolute;
-    top: 128px;
-    /* min-height: var(--minimum-height); */
-    width: 30%;
+    top: 16rem;
+    width: 36rem;
     margin-left: 10%;
     padding-block: 24px;
     overflow: hidden;
