@@ -1,24 +1,20 @@
 .form_container {
     display: flex;
     min-height: 100vh;
-    background: linear-gradient(90deg, var(--primary-color) 40%, var(--accent-color) 100%);
+    padding-inline: var(--space-farthest);
+    background-color: var(--primary-color);
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 35%;
+    min-width: 265px;
+    max-width: 400px;
     min-height: 100vh;
-    border-radius: 0px 12px 12px 0px;
-    padding-block: 16px;
-    padding-inline: 32px;
-    background-color: var(--primary-color);
+    margin-inline: auto;
 }
 
 .form_oauth {
     display: block;
-    margin-block-start: 16px;
+    margin-block: var(--space-unrelated);
 }
 
 .form_oauth > .form_button {
@@ -28,20 +24,19 @@
 .form > h2,
 .form > p  {
     text-align: left;
-    margin-block: 0;
     color: var(--secondary-color);
     font-weight: bold;
 }
 
 .form_fieldset {
     border-radius: 12px;
-    margin-block: 16px;
+    margin-block: var(--space-related);
 }
 
 .form_fieldset > div {
-    margin-block: 4px;
+    margin-block: var(--space-closest);
     border-radius: 12px;
-    padding: 12px;
+    padding: var(--space-standard);
 }
 
 .form_label {
@@ -49,6 +44,7 @@
 }
 
 .form_forgot_button {
+    font-size: 0.8rem;
     color: var(--secondary-color);
     margin-left: auto;
 }
@@ -73,10 +69,10 @@
     font-weight: bold;
     display: block;
     width: 100%;
-    margin-block-start: 24px;
+    margin-block-start: var(--space-standard);
     margin-inline: auto;
-    padding-block: 8px;
-    padding-inline: 16px;
+    padding-block: var(--space-standard);
+    padding-inline: var(--space-related);
     border: 0px;
     border-radius: 8px;
 }
@@ -91,26 +87,72 @@
 
 .register_button {
     color: var(--secondary-color);
+    margin-block: var(--space-related);
     margin-inline: auto;
-    margin-block: 12px;
     text-align: center;
 }
 
 .small_print {
     color: var(--secondary-color);
-    margin-block-start: 24px;
+    margin-block-start: var(--space-unrelated);
     font-size: 0.7rem;
 } 
 
 .aside {
-    width: 60%;
-    padding: 64px;
+    width: 100%;
 }
 
 .side_content {
+    max-width: 400px;
+    margin-block-start: 20%;
     margin-left: auto;
-    max-width: 50%;
     color: var(--secondary-color);
-    gap: 24px;
-    margin-top: 20%;
+}
+
+.side_content > h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--space-related);
+}
+
+.side_content > p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: lighter;
+    
+}
+
+
+/* Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .form {
+        width: 35%;
+        padding-inline: var(--space-far);
+        border-radius: 0px 12px 12px 0px;
+    }
+
+    .form_container {
+        background: linear-gradient(90deg, var(--primary-color) 40%, var(--accent-color) 100%);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

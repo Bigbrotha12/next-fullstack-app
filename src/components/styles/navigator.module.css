@@ -1,25 +1,18 @@
 .navigator {
-    position: absolute;
-    top: 0;
-    z-index: 2;
     display: flex;
-    width: 100%;
-    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
     align-items: center;
-    padding-block: 12px;
+    font-size: 1.5rem;
 }
 
 .navigation_logo {
-    margin-left: 32px;
+    display: initial;
 }
 
 .navigation_nav {
-    display: flex;
-    gap: 32px;
     margin-right: auto;
-    padding-left: 32px;
-    /* color: var(--secondary-color); */
-    
 }
 
 .navigation_nav > div {
@@ -36,7 +29,6 @@
 .navigation_buttons {
     display: inherit;
     padding: 8px;
-    
 }
 
 .navigation_search {
@@ -48,7 +40,6 @@
 .navigation_options {
     display: inherit;
     margin-left: auto;
-    padding-left: 12px;
     color: var(--accent-color);
     gap: 0.5rem;
 }
@@ -57,7 +48,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-inline-end: 12px;
 }
 
 .navigation_options > div:hover {
@@ -67,8 +57,7 @@
 
 .navigation_login {
     display: inherit;
-    padding: 12px;
-    
+  
 }
 
 /* Breakpoints */

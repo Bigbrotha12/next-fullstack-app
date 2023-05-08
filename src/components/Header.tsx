@@ -7,7 +7,7 @@ export default function Header(props: HeaderProps): JSX.Element {
     return (
         <nav className={styles.navigator}>
             <div className={styles.navigation_logo}>{props.logo}</div>
-            <div className={styles.navigation_nav}>
+            <div className={`${styles.navigation_nav} med`}>
                 {
                     props.navigation?.map((item, index) => {
                         return (
@@ -23,7 +23,7 @@ export default function Header(props: HeaderProps): JSX.Element {
                     })
                 }
             </div>
-            <div className={styles.navigation_login}>
+            <div className={`${styles.navigation_login} med`}>
                 <Link href="/login"><Button>{props.endButton}</Button></Link>
             </div>
         </nav>

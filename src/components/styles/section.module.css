@@ -1,12 +1,13 @@
 .section_container {
-    padding-block: 64px;
+    padding-block: var(--space-farthest);
     
 }
 
 .section_container > h5, 
 .section_container > h1 {
     text-align: center;
-    margin-block: 4px;
+    margin-block: var(--space-closest);
+    margin-inline: var(--space-far);
 }
 
 .section_container > h5 {
@@ -14,9 +15,7 @@
 }
 
 .section_content {
-    margin-block: 32px;
-    margin-inline: 10%;
+    margin: var(--space-far);
     text-align: center;
     display: flex;
-    gap: 16px;
 }

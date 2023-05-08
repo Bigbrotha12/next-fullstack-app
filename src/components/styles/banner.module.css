@@ -1,46 +1,30 @@
 .banner_container {
-    --minimum-height: 600px;
-
-    display: flex;
-    /* min-height: var(--minimum-height); */
-    max-height: 100vh;
     overflow: hidden;
-    /* background-image: url("https://picsum.photos/1600/900");  */
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center; */
+    height: 600px;
 }
 
 .banner_container::after {
     content: '';
     position: absolute;
-    height: 100px;
-    width: 200px;
-    bottom: -5%;
-    z-index: -1;
+    top: 600px;
+    left: 0;
+    width: 100px;
+    height: 20px;
+    z-index: 1;
     background-color: var(--primary-color);
 }
 
 .banner_sidepanel {
     position: absolute;
-    top: 16rem;
-    width: 36rem;
-    margin-left: 10%;
-    padding-block: 24px;
+    top: 100px;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+    margin-inline: var(--space-far);
+    padding-inline: var(--space-related);
     overflow: hidden;
     
 }
-
-/* .banner_sidepanel::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--background-color);
-    mix-blend-mode: multiply;
-} */
 
 .banner_sidepanel > h2,
 .banner_sidepanel > p {
@@ -71,4 +55,29 @@
 
 .banner_button:hover {
     background-color: var(--font-color);
+}
+
+/* Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .banner_sidepanel { max-width: 40%;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

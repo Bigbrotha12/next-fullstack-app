@@ -43,16 +43,6 @@ export default function Home() {
             content='LoremPariatur ipsum quis et cillum anim duis cillum ipsum cupidatat irure exercitation officia aliqua velit. Eu eiusmod nisi fugiat labore incididunt dolor. Dolore ea quis amet aliquip Lorem do cillum esse incididunt. Incididunt exercitation fugiat sit tempor anim ut dolor eu qui dolore esse culpa eu.'
             icon={<Icons.Search />}
             buttonText='Click Me' />
-          <Card
-            title='Card Title'
-            content='LoremPariatur ipsum quis et cillum anim duis cillum ipsum cupidatat irure exercitation officia aliqua velit. Eu eiusmod nisi fugiat labore incididunt dolor. Dolore ea quis amet aliquip Lorem do cillum esse incididunt. Incididunt exercitation fugiat sit tempor anim ut dolor eu qui dolore esse culpa eu.'
-            icon={<Icons.Language />}
-            buttonText='Click Me' />
-          <Card
-            title='Card Title'
-            content='LoremPariatur ipsum quis et cillum anim duis cillum ipsum cupidatat irure exercitation officia aliqua velit. Eu eiusmod nisi fugiat labore incididunt dolor. Dolore ea quis amet aliquip Lorem do cillum esse incididunt. Incididunt exercitation fugiat sit tempor anim ut dolor eu qui dolore esse culpa eu.'
-            icon={<Icons.MenuIcon />}
-            buttonText='Click Me' />
         </Section>
 
       </main>

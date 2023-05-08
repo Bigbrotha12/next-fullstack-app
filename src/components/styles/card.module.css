@@ -1,13 +1,13 @@
 .card_container {
-    width: fit-content;
+    
     position: relative;
-    max-width: 20%;
-    padding-inline: 32px;
-    padding-block: 24px;
+    width: fit-content;
+    padding-inline: var(--space-far);
+    padding-block: var(--space-unrelated);
+    margin-inline: auto;
+    margin-block: var(--space-standard);
     border: 1px solid var(--background-color);
     border-radius: 12px;
-    margin-inline: auto;
-    margin-block: 12px;
     transition: transform 0.1s;
 }
 
@@ -50,6 +50,11 @@
     text-align: left;
 }
 
+.card_container > h3 {
+    font-size: 2rem;
+    margin-block: var(--space-related);
+}
+
 .card_container > p {
     font-weight: lighter;
     font-size: 0.8rem;
@@ -57,13 +62,13 @@
 
 .card_icon_container {
     margin-inline: auto;
-    height: 24px;
 }
 
 .card_button {
-    border-radius: 12px;
-    padding-inline: 16px;
-    padding-block: 8px;
+    border-radius: 4px;
+    margin-block: var(--space-standard);
+    padding-inline: var(--space-related);
+    padding-block: var(--space-close);
     background-color: inherit;
     border: 2px solid var(--font-color);
     color: var(--font-color);

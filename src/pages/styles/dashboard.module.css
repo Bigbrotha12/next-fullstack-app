@@ -1,6 +1,6 @@
 .dashboard_container {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: var(--space-standard);
     background-color: var(--secondary-color);
 }
