@@ -1,6 +1,116 @@
 .dashboard_container {
     display: flex;
+    min-height: 100vh;
     justify-content: center;
-    gap: var(--space-standard);
     background-color: var(--secondary-color);
+}
+
+.dashboard_sidebar {
+    position: relative;
+    width: 15%;
+    background-image: url("https://picsum.photos/id/350/600/400");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dashboard_sidebar::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to left, #2c2e4b 0%, #44446b 50%, #2c2e4b 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.sidebar_menu_container {
+    position: absolute;
+    z-index: 1;
+    padding-block: var(--space-related);
+    padding-inline: var(--space-unrelated);
+    color: var(--secondary-color);
+}
+
+.dashboard_main {
+    width: 85%;
+    background-color: var(--primary-color);
+}
+
+.sidebar_header, .main_header {
+    padding: var(--space-standard);
+    background-color: var(--accent-color);
+}
+
+.main_header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.main_banner {
+    margin-block: var(--space-related);
+    margin-inline: var(--space-unrelated);
+    padding: var(--space-standard);
+    background-color: var(--secondary-color);
+}
+
+.main_grid_container {
+    margin-inline: auto;
+    margin-block: var(--space-related);
+    padding: var(--space-unrelated);
+    display: grid;
+    gap: var(--space-standard);
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+}
+
+.main_card {
+    padding: var(--space-related);
+    background-color: var(--secondary-color);
+    min-height: 80px;
+    border-radius: 4px;
+}
+
+.main_card:hover {
+    background-color: #f5f5f5;
+}
+
+.card_1 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+}
+
+.card_2 {
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.card_3 {
+    grid-column: 7 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.card_4 {
+    grid-column: 5 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.card_5 {
+    grid-column: 7 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.card_6 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 4;
+}
+
+.card_7 {
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 4;
+}
+
+.card_8 {
+    grid-column: 5 / span 4;
+    grid-row: 5 / span 4;
 }

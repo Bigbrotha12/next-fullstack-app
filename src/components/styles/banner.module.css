@@ -16,12 +16,12 @@
 
 .banner_sidepanel {
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 0;
     right: 0;
-    max-width: 300px;
-    margin-inline: var(--space-far);
-    padding-inline: var(--space-related);
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-left: var(--space-far);
     overflow: hidden;
     
 }
@@ -29,6 +29,7 @@
 .banner_sidepanel > h2,
 .banner_sidepanel > p {
     position: relative;
+    max-width: 400px;
     color: var(--secondary-color);
 }
 
@@ -45,9 +46,9 @@
 .banner_button {
     background-color: var(--accent-color);
     color: var(--secondary-color);
-    padding-inline: 24px;
-    padding-block: 8px;
-    margin-block-start: 24px;
+    padding-inline: var(--space-related);
+    padding-block: var(--space-standard);
+    margin-block-start: var(--space-unrelated);
     border: 0px;
     border-radius: 6px;
     font-size: 1.2rem;
@@ -65,12 +66,16 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .banner_sidepanel { max-width: 40%;}
+    
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
+    .banner_sidepanel { 
+        max-width: 40%;
+        left: -40%
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

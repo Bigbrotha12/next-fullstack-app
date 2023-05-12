@@ -8,6 +8,10 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=optional"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
+        />
       </Head>
       <body>
         <Main />

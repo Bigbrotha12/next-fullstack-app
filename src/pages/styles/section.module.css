@@ -1,0 +1,27 @@
+.section_container {
+    position: relative;
+    max-width: 100vw;
+    background-color: var(--secondary-color);
+    overflow-x: clip;
+}
+
+.section_container::before,
+.section_container::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120vw;
+    z-index: -1;
+}
+
+.section_container::after {
+    background-color: var(--primary-color);
+    transform: rotate(5deg) translate(-10%);
+}
+
+.section_container::before {
+    background-color: var(--accent-color);
+    transform: rotate(-5deg) translate(-10%);
+}

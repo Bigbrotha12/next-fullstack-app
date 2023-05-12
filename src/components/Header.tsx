@@ -7,7 +7,7 @@ export default function Header(props: HeaderProps): JSX.Element {
     return (
         <nav className={styles.navigator}>
             <div className={styles.navigation_logo}>{props.logo}</div>
-            <div className={`${styles.navigation_nav} med`}>
+            <div className={styles.navigation_nav}>
                 {
                     props.navigation?.map((item, index) => {
                         return (

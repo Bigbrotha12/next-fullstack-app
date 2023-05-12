@@ -4,7 +4,7 @@ import Button from './Button'
 
 export default function Card(props: CardProps): JSX.Element {
     return (
-        <div className={styles.card_container}>
+        <div className={props.className ? `${props.className} ${styles.card_container}` : styles.card_container}>
             <div className={styles.card_icon_container}>{props.icon}</div>
             <h3>{props.title}</h3>
             <p>{props.content}</p>
@@ -14,6 +14,7 @@ export default function Card(props: CardProps): JSX.Element {
 }
 
 type CardProps = {
+    className?: string,
     icon?: JSX.Element,
     title?: string,
     content?: string,

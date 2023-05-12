@@ -2,18 +2,15 @@
 .button {
     background-color: var(--accent-color);
     text-align: center;
-    align-items: center;
     color: var(--secondary-color);
-    padding-inline: 24px;
-    padding-block: 8px;
-    margin-inline: 16px;
-    border: 0px;
+    padding-inline: var(--space-related);
+    padding-block: var(--space-close);
+    margin-inline: auto;
     border-radius: 6px;
-    font-size: 1.2rem;
     border: 2px solid var(--font-color);
 }
 
 .button:hover {
-    background-color: var(--font-color);
+    background-color: var(--secondary-color);
 }
 

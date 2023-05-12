@@ -1,8 +1,8 @@
 -- CreateTable
-CREATE TABLE "users" (
+CREATE TABLE "profiles" (
     "id" BIGSERIAL NOT NULL,
-    "email" TEXT,
-    "created_at" TIMESTAMPTZ(6) DEFAULT CURRENT_TIMESTAMP,
+    "username" TEXT,
+    "updated_at" TIMESTAMPTZ(6) DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );

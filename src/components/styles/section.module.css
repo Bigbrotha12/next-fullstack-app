@@ -1,6 +1,5 @@
 .section_container {
-    padding-block: var(--space-farthest);
-    
+    padding: var(--space-farthest);
 }
 
 .section_container > h5, 
@@ -15,7 +14,9 @@
 }
 
 .section_content {
-    margin: var(--space-far);
+    margin-block: var(--space-far);
+    margin-inline: auto;
     text-align: center;
     display: flex;
+    max-width: var(--max-width);
 }

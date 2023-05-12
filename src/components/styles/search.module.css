@@ -5,7 +5,7 @@
     align-items: center;
     height: 44px;
     width: 100%;
-    padding-inline: 12px;
+    padding-inline: var(--space-standard);
     border: 1px inset var(--font-color);
     border-radius: 2rem;
 }
