@@ -9,7 +9,7 @@ import Cancel from '@mui/icons-material/Cancel';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Language from '@mui/icons-material/Language';
 import Search from '@mui/icons-material/Search';
-import Facebook from '@mui/icons-material/Facebook';
+import Github from '@mui/icons-material/Github';
 import Google from '@mui/icons-material/Google';
 
 export const Icons = {
@@ -24,6 +24,6 @@ export const Icons = {
     AccountCircle,
     Language,
     Search,
-    Facebook,
+    Github,
     Google,
 }

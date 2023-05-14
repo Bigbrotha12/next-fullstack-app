@@ -1,4 +1,5 @@
 .form_container {
+    position: relative;
     display: flex;
     min-height: 100vh;
     padding-inline: var(--space-farthest);

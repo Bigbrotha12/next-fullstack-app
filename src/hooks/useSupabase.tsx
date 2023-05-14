@@ -4,7 +4,10 @@ import { createClient, User, Session } from '@supabase/supabase-js'
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
 interface SupabaseAuth {
     signInWithEmail: (email: string, password: string) => Promise<void>,
+    signInWithOAuth: (provider: OAuthProvider) => Promise<void>,
     signUpWithEmail: (email: string, password: string) => Promise<void>,
+    resetPassword: (user: string) => Promise<void>,
+    updatePassword: (password: string) => Promise<void>,
     signOut: () => Promise<void>,
     fetchSession: () => Promise<void>,
     fetchUser: () => Promise<void>,
@@ -36,6 +39,22 @@ export function useSupabase(): [User, Session, boolean, string, SupabaseAuth] {
             setLoading(false)
         },
 
+        signInWithOAuth: async (provider: OAuthProvider): Promise<void> => {
+            setLoading(true)
+            const { data, error } = await supabase.auth.signInWithOAuth({
+                provider
+            })
+
+            if (error) {
+                setAuthError(error.message)
+                return
+            }
+
+            setAuthError('')
+            setLoading(false)
+            console.log(data)
+        },
+
         signUpWithEmail: async (email: string, password: string): Promise<void> => {
             setLoading(true)
             const { data, error } = await supabase.auth.signUp({
@@ -52,6 +71,18 @@ export function useSupabase(): [User, Session, boolean, string, SupabaseAuth] {
             setAuthError('')
             setSession(data.session!)
             setLoading(false)
+        },
+
+        resetPassword: async (user: string) => {
+            await supabase.auth.resetPasswordForEmail(user, {
+                redirectTo: 'https://next-fullstack-app-one.vercel.app/account/update-password',
+            })
+        },
+
+        updatePassword: async (password: string) => {
+            await supabase.auth.updateUser({
+                password,
+            })
         },
 
         signOut: async () => {
@@ -96,3 +127,5 @@ export function useSupabase(): [User, Session, boolean, string, SupabaseAuth] {
 
     return [user!, session!, loading, authError, Supabase]
 }
+
+type OAuthProvider = "github" | "google" | "facebook"

@@ -46,16 +46,16 @@ export default function RegisterForm(props: LoginFormProps): JSX.Element {
                     <legend className={styles.form_legend}>Register</legend>
                     <div>
                         <label className={styles.form_label} htmlFor='username-input'>Email</label>
-                        <input id='username-input' type='text' placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                        <input id='username-input' type='text' placeholder="Username" maxLength={20} value={username} onChange={(e) => setUsername(e.target.value)}/>
 
                         <label className={styles.form_label} htmlFor='address-input'>Address</label>
                         <input id='address-input' type='text' placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)}/>
             
                         <label className={styles.form_label} htmlFor='password-input'>Password</label>
-                        <input id='password-input' type='password' placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input id='password-input' type='password' placeholder="Password" maxLength={15} value={password} onChange={(e) => setPassword(e.target.value)} />
                         
                         <label className={styles.form_label} htmlFor='password-repeat-input'>Confirm Password</label>
-                        <input id='password-repeat-input' type='password' pattern={`${password}`} value={passwordConfirm} title='password do not match' placeholder="Password" onChange={(e) => setPasswordConfirm(e.target.value)}/>
+                        <input id='password-repeat-input' type='password' pattern={`${password}`} maxLength={15} value={passwordConfirm} title='password do not match' placeholder="Password" onChange={(e) => setPasswordConfirm(e.target.value)}/>
                         
                         <button className={styles.form_button} type="submit">Sign Up</button>
                     </div>

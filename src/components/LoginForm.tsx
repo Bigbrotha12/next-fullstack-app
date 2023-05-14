@@ -9,16 +9,21 @@ import Modal from './Modal';
 import { Material } from '@/assets/Material';
 
 export default function LoginForm(props: LoginFormProps): JSX.Element {
-    const [modalOpen, setModalOpen] = React.useState<boolean>(false);
-    const [username, setUsername] = React.useState<string>('');
-    const [password, setPassword] = React.useState<string>('');
+    const [modalOpen, setModalOpen] = React.useState<boolean>(false)
+    const [username, setUsername] = React.useState<string>('')
+    const [password, setPassword] = React.useState<string>('')
     const [user, session, loading, error, supabase] = useSupabase()
 
     function signIn() {
-        setModalOpen(true);
         if (username && password) {
+            setModalOpen(true);
             supabase.signInWithEmail(username, password)
         }
+    }
+
+    function signInGithub() {
+        console.log("clicked")
+        supabase.signInWithOAuth("github")
     }
 
     React.useEffect(() => {
@@ -35,26 +40,26 @@ export default function LoginForm(props: LoginFormProps): JSX.Element {
                 <h2>{props.title}</h2>
                 <p>{props.subtitle}</p>
                 <div className={styles.form_oauth}>
-                    <Button className={styles.form_button} startIcon={<Icons.Facebook />}>Continue with Facebook</Button>
-                    <Button className={styles.form_button} startIcon={<Icons.Google />}>Continue with Google</Button>
+                    <Button type='button' className={styles.form_button} startIcon={<Icons.Github />} onClick={signInGithub}>Continue with Github</Button>
+                    {/* <Button className={styles.form_button} startIcon={<Icons.Google />}>Continue with Google</Button> */}
                 </div>
                 <hr style={{width: '100%'}}/>
                 <fieldset className={styles.form_fieldset}>
                     <legend className={styles.form_legend}>Log In</legend>
                     <div>
                     <label className={styles.form_label} htmlFor='username-input'>Email</label>
-                    <input id='username-input' type='text' placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <input id='username-input' type='text' placeholder="Username" value={username} maxLength={20} onChange={(e) => setUsername(e.target.value)}/>
                     <div style={{display: 'flex', justifyContent: 'space-between'}}>
                         <span><label className={styles.form_label} htmlFor='password-input'>Password</label></span>
-                        <span><Link className={styles.form_forgot_button} href={"/register"}>Forgot Password?</Link></span>
+                        <span><Link className={styles.form_forgot_button} href={"/account/forgot-password"}>Forgot Password?</Link></span>
                     </div>
-                    <input id='password-input' type='password' placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input id='password-input' type='password' placeholder="Password" maxLength={15} value={password} onChange={(e) => setPassword(e.target.value)} />
                     <button className={styles.form_button} type="submit">Log In</button>
                     </div>
                 </fieldset>
                 
                 <p className={styles.register_text}>Don&apos;t have an account? <span><Link className={styles.register_button} href="/register">Register Here</Link></span></p>
-                <small className={styles.small_print}>By continuing, you agree to this site&apos;s <Link className={styles.form_forgot_button} href={"/register"}>Terms of Service</Link> and <Link className={styles.form_forgot_button} href={"/register"}>Privacy Policy</Link>, and to receive periodic emails with updates.</small>
+                <small className={styles.small_print}>By continuing, you agree to this site&apos;s <Link className={styles.form_forgot_button} href={"/placeholder"}>Terms of Service</Link> and <Link className={styles.form_forgot_button} href={"/placeholder"}>Privacy Policy</Link>, and to receive periodic emails with updates.</small>
             </form>
             
             <div className={`${styles.aside} large`}>
