@@ -9,7 +9,7 @@ import Cancel from '@mui/icons-material/Cancel';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Language from '@mui/icons-material/Language';
 import Search from '@mui/icons-material/Search';
-import Github from '@mui/icons-material/Github';
+import Github from '@mui/icons-material/GitHub';
 import Google from '@mui/icons-material/Google';
 
 export const Icons = {
