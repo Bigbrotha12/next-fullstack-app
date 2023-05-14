@@ -2,15 +2,18 @@
 .button {
     background-color: var(--accent-color);
     text-align: center;
+    font-weight: bold;
     color: var(--secondary-color);
-    padding-inline: var(--space-related);
-    padding-block: var(--space-close);
+    padding-inline: var(--space-far);
+    padding-block: var(--space-standard);
     margin-inline: auto;
     border-radius: 6px;
-    border: 2px solid var(--font-color);
+    border: 2px solid var(--accent-color);
 }
 
 .button:hover {
     background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
 }
 
