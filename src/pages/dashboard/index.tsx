@@ -3,6 +3,7 @@ import React from 'react'
 import styles from '../styles/dashboard.module.css'
 import { Icons } from '@/assets/Icons'
 import Link from 'next/link'
+import Chart from '@/components/Chart'
 
 const menuItems: Array<MenuListProps> = [
     {
@@ -47,7 +48,7 @@ export default function Dashboard(): JSX.Element {
     return (
         <div className={styles.dashboard_container}>
             <div className={styles.dashboard_sidebar}>
-                <div className={styles.sidebar_header}>sidebar header</div>
+                {/* <div className={styles.sidebar_header}>sidebar header</div> */}
                 <div className={styles.sidebar_menu_container}>
                     {menuItems.map(list => {
                         return (
@@ -61,14 +62,27 @@ export default function Dashboard(): JSX.Element {
                 <div className={styles.main_header}></div>
                 <div className={styles.main_banner}>Info Banner</div>
                 <div className={styles.main_grid_container}>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_1}`} />
-                    <DashboardCard className={`${styles.main_card} ${styles.card_2}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_1}`}>
+                        <div className={styles.card_header}>
+                            <Icons.ArrowForward />
+                            <h3>Bandwidth Report</h3>
+                        </div>
+                        <hr />
+                        <div className={styles.card_content}>
+                            <p>Item 1</p>
+                            <p>Item 2</p>
+                            <p>Item 3</p>
+                            <p>Item 4</p>
+                        </div>
+                        <Chart />
+                    </DashboardCard>
+                    {/* <DashboardCard className={`${styles.main_card} ${styles.card_2}`} />
                     <DashboardCard className={`${styles.main_card} ${styles.card_3}`} />
                     <DashboardCard className={`${styles.main_card} ${styles.card_4}`} />
                     <DashboardCard className={`${styles.main_card} ${styles.card_5}`} />
                     <DashboardCard className={`${styles.main_card} ${styles.card_6}`} />
                     <DashboardCard className={`${styles.main_card} ${styles.card_7}`} />
-                    <DashboardCard className={`${styles.main_card} ${styles.card_8}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_8}`} /> */}
                 </div>
                 
             </div>
@@ -102,11 +116,12 @@ type MenuListProps = {
 function DashboardCard(props: DashboardCardProps) {
     return (
         <div className={props.className}>
-            Card 1
+            {props.children}
         </div>
     )
 }
 
 type DashboardCardProps = {
     className: string,
+    children?: React.ReactNode
 }
