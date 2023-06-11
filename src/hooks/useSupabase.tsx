@@ -1,5 +1,6 @@
 import React from 'react'
 import { createClient, User, Session } from '@supabase/supabase-js'
+import { OAuthProvider } from '@/lib/types';
 
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!);
 interface SupabaseAuth {
@@ -11,7 +12,6 @@ interface SupabaseAuth {
     signOut: () => Promise<void>,
     fetchSession: () => Promise<void>,
     fetchUser: () => Promise<void>,
-    
 }
     
 export function useSupabase(): [User, Session, boolean, string, SupabaseAuth] {
@@ -128,4 +128,3 @@ export function useSupabase(): [User, Session, boolean, string, SupabaseAuth] {
     return [user!, session!, loading, authError, Supabase]
 }
 
-type OAuthProvider = "github" | "google" | "facebook"

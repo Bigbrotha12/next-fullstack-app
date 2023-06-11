@@ -15,14 +15,18 @@ ul {
 
 :root {
     /* Color Palette */
-    --background-color: #5c5c5c;
-    --primary-color: #242424;
-    --secondary-color: #FCFFFD;
+    --neutral-color: #5c5c5c;
+    --dark-color: #242424;
+    --light-color: #FCFFFD;
+    --secondary-color: #3F426B;
+    --secondary-color-dark: #2c2e4b;
     --accent-color: #CD5334;
+    --accent-color-dark: #A54229;
 
     /* Typography */
     --font-family: Arbutus Slab, Roboto, Inter;
-    --font-color: #242424;
+    --font-color-light: #FCFFFD;
+    --font-color-dark: #242424;
 
     /* Spacing */
     --space-closest: 4px;
