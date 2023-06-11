@@ -61,7 +61,7 @@ export default function Home() {
           
         </Section>
 
-        <Section className={SectionStyles.section_container} heading='Section 2' subheading='This one has fancy pseudo-elements'>
+        <Section className={SectionStyles.section_container} heading='Section 2' subheading='What makes us unique?'>
           <p>Incididunt ea anim consectetur aute est aute aliqua culpa voluptate exercitation nostrud laboris fugiat fugiat. Tempor ea enim commodo occaecat consectetur incididunt duis nisi quis quis ea anim et. Mollit id occaecat ad dolore est nulla dolore velit. Nulla mollit aliquip non ex et adipisicing id eiusmod aliquip aute culpa non cillum voluptate. Quis laboris cillum cillum consequat ea dolore sit eu excepteur adipisicing et.</p>
         </Section>
 

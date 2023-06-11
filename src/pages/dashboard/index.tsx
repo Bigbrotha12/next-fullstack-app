@@ -3,8 +3,7 @@ import React from 'react'
 import styles from '../styles/dashboard.module.css'
 import { Icons } from '@/assets/Icons'
 import Link from 'next/link'
-import Image from 'next/image'
-import Logo from '../../assets/images/logo-placeholder.png'
+import Chart from '@/components/Chart'
 
 const menuItems: Array<MenuListProps> = [
     { title: "Menu", icon: <Icons.Approval /> },
@@ -22,6 +21,7 @@ export default function Dashboard(): JSX.Element {
     return (
         <div className={styles.dashboard_container}>
             <div className={styles.dashboard_sidebar}>
+                {/* <div className={styles.sidebar_header}>sidebar header</div> */}
                 <div className={styles.sidebar_menu_container}>
                     <div className={styles.sidebar_logo_container}>
                         <Image priority={true} placeholder='blur' src={Logo} width='64' height='64' alt='logo' />
@@ -55,32 +55,28 @@ export default function Dashboard(): JSX.Element {
                 <div className={styles.main_banner}>Info Banner</div>
                 <div className={styles.main_grid_container}>
                     <DashboardCard className={`${styles.main_card} ${styles.card_1}`}>
-                        <p>Total number of transactions</p>
-                                  
+                        <div className={styles.card_header}>
+                            <Icons.ArrowForward />
+                            <h3>Bandwidth Report</h3>
+                        </div>
+                        <hr />
+                        <div className={styles.card_content}>
+                            <p>Item 1</p>
+                            <p>Item 2</p>
+                            <p>Item 3</p>
+                            <p>Item 4</p>
+                        </div>
+                        <Chart />
                     </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_2}`}>
-                        <p>Total income (last 30 days)</p>
-
-                    </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_3}`}>
-                        <p>Total users (last 30 days)</p>
-                    </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_4}`}>
-                        <p>Todo items completed last week</p>
-                    </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_5}`}>
-                        <p>Total Todos remaining</p>
-                    </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_6}`}>
-                        <p>Todos added (last 30 days)</p>
-                    </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_7}`}>
-                        <p>Todos overdue (last 30 days)</p>
-                    </DashboardCard>
-                    <DashboardCard className={`${styles.main_card} ${styles.card_8}`}>
-                        <p>Acquisitions per month (last 12 months)</p>
-                    </DashboardCard>
-                </div>           
+                    {/* <DashboardCard className={`${styles.main_card} ${styles.card_2}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_3}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_4}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_5}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_6}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_7}`} />
+                    <DashboardCard className={`${styles.main_card} ${styles.card_8}`} /> */}
+                </div>
+                
             </div>
         </div>
     )
@@ -109,6 +105,6 @@ function DashboardCard(props: DashboardCardProps) {
 }
 
 type DashboardCardProps = {
-    className?: string,
+    className: string,
     children?: React.ReactNode
 }
