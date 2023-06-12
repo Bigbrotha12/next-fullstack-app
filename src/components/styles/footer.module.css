@@ -1,0 +1,20 @@
+.footer_container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-standard);
+    background-color: var(--accent-color);
+    min-height: 256px;
+    padding-inline: var(--space-far);
+    padding-block: var(--space-far);
+}
+
+.footer_column {
+    font-size: 1.5rem;
+    margin-inline: var(--space-unrelated);
+}
+
+.footer_front {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}

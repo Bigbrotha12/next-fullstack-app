@@ -3,7 +3,7 @@
     background-color: var(--accent-color);
     text-align: center;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--light-color);
     padding-inline: var(--space-far);
     padding-block: var(--space-standard);
     margin-inline: auto;
@@ -12,7 +12,7 @@
 }
 
 .button:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--light-color);
     color: var(--accent-color);
     border: 2px solid var(--accent-color);
 }

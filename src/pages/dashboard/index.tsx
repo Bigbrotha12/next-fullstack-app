@@ -1,9 +1,12 @@
-import Card from '@/components/Card'
 import React from 'react'
 import styles from '../styles/dashboard.module.css'
 import { Icons } from '@/assets/Icons'
+import Logo from '@/assets/images/logo-placeholder.png'
 import Link from 'next/link'
+import Image from 'next/image'
 import Chart from '@/components/Chart'
+import Card from '@/components/Card'
+import DashboardCard from '@/components/DashboardCard'
 
 const menuItems: Array<MenuListProps> = [
     { title: "Menu", icon: <Icons.Approval /> },
@@ -55,18 +58,7 @@ export default function Dashboard(): JSX.Element {
                 <div className={styles.main_banner}>Info Banner</div>
                 <div className={styles.main_grid_container}>
                     <DashboardCard className={`${styles.main_card} ${styles.card_1}`}>
-                        <div className={styles.card_header}>
-                            <Icons.ArrowForward />
-                            <h3>Bandwidth Report</h3>
-                        </div>
-                        <hr />
-                        <div className={styles.card_content}>
-                            <p>Item 1</p>
-                            <p>Item 2</p>
-                            <p>Item 3</p>
-                            <p>Item 4</p>
-                        </div>
-                        <Chart />
+                        
                     </DashboardCard>
                     {/* <DashboardCard className={`${styles.main_card} ${styles.card_2}`} />
                     <DashboardCard className={`${styles.main_card} ${styles.card_3}`} />
@@ -96,15 +88,3 @@ type MenuListProps = {
     icon: JSX.Element
 } 
 
-function DashboardCard(props: DashboardCardProps) {
-    return (
-        <div className={props.className}>
-            {props.children}
-        </div>
-    )
-}
-
-type DashboardCardProps = {
-    className: string,
-    children?: React.ReactNode
-}

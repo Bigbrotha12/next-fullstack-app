@@ -30,7 +30,7 @@
 .banner_sidepanel > p {
     position: relative;
     max-width: 400px;
-    color: var(--secondary-color);
+    color: var(--light-color);
 }
 
 .banner_sidepanel > h2 {
@@ -45,7 +45,7 @@
 
 .banner_button {
     background-color: var(--accent-color);
-    color: var(--secondary-color);
+    color: var(--light-color);
     padding-inline: var(--space-related);
     padding-block: var(--space-standard);
     margin-block-start: var(--space-unrelated);

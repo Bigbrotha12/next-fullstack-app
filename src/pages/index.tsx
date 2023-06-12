@@ -9,6 +9,7 @@ import Logo from '@/assets/images/logo-placeholder.png'
 import Card from '@/components/Card'
 import SectionStyles from './styles/section.module.css'
 import Grid from '@/components/Grid'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -61,9 +62,15 @@ export default function Home() {
           
         </Section>
 
-        <Section className={SectionStyles.section_container} heading='Section 2' subheading='What makes us unique?'>
+        <Section className={SectionStyles.section_container} heading='Pricing' subheading='What makes us unique?'>
           <p>Incididunt ea anim consectetur aute est aute aliqua culpa voluptate exercitation nostrud laboris fugiat fugiat. Tempor ea enim commodo occaecat consectetur incididunt duis nisi quis quis ea anim et. Mollit id occaecat ad dolore est nulla dolore velit. Nulla mollit aliquip non ex et adipisicing id eiusmod aliquip aute culpa non cillum voluptate. Quis laboris cillum cillum consequat ea dolore sit eu excepteur adipisicing et.</p>
         </Section>
+
+        <Section className={SectionStyles.section_container} heading='Reviews' subheading='What people say about us?'>
+          <p>Incididunt ea anim consectetur aute est aute aliqua culpa voluptate exercitation nostrud laboris fugiat fugiat. Tempor ea enim commodo occaecat consectetur incididunt duis nisi quis quis ea anim et. Mollit id occaecat ad dolore est nulla dolore velit. Nulla mollit aliquip non ex et adipisicing id eiusmod aliquip aute culpa non cillum voluptate. Quis laboris cillum cillum consequat ea dolore sit eu excepteur adipisicing et.</p>
+        </Section>
+
+        <Footer />
 
       </main>
     </React.Fragment>

@@ -5,8 +5,8 @@
     right: 0;
     align-items: center;
     font-size: 1.5rem;
-    max-width: var(--max-width);
-    margin-inline: auto;
+    /* max-width: var(--max-width); */
+    margin-inline: var(--space-standard);
 }
 
 .navigation_logo {
